@@ -367,7 +367,7 @@ def betterEvaluationFunction(currentGameState):
         if ghostDistance < 2 and ghostState.scaredTimer == 0:
             return -1e9  
         elif ghostDistance < 2 and ghostState.scaredTimer > 0:
-            score += 100.0
+            score += 200.0
     
     for scaredTime in ScaredTimes:
         if scaredTime > 0:
