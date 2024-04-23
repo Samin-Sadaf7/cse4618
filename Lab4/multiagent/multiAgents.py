@@ -75,7 +75,7 @@ class ReflexAgent(Agent):
 
         "*** YOUR CODE HERE ***"
         score = successorGameState.getScore()
-
+        
         minFoodDist = 1e9
         for food in newFood.asList():
             minFoodDist  =  min( minFoodDist, manhattanDistance(newPos, food))
@@ -83,9 +83,7 @@ class ReflexAgent(Agent):
         for ghostState in newGhostStates:
             ghostPos = ghostState.getPosition()
             ghostDist = manhattanDistance(newPos, ghostPos)
-            if ghostDist < 2 and ghostState.scaredTimer == 0:
-                return -1e9
-
+           
         if minFoodDist > 0:
             score += 1.0/minFoodDist
 
